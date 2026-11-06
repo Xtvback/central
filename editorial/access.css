@@ -1,0 +1,21 @@
+.access-screen{position:fixed;inset:0;z-index:99;display:grid;place-items:center;padding:24px;background:radial-gradient(ellipse at 83% 8%,#dce7f0 0,transparent 40%),linear-gradient(135deg,#f9f8f4,#eef0ee)}
+.access-screen[hidden]{display:none!important}
+.access-card{width:min(100%,420px);background:#fff;border:1px solid #e8e7e2;border-radius:22px;box-shadow:0 28px 100px rgba(32,49,68,.12);padding:clamp(24px,5vw,40px)}
+.access-logo{width:60px;height:60px;border-radius:16px;display:grid;place-items:center;font:700 40px Georgia,serif;background:#243951;color:white;margin-bottom:28px}
+.access-logo span{color:#d6ac82}
+.access-overline{color:#58769c;font-weight:800;font-size:10px;letter-spacing:.18em;text-transform:uppercase;margin:0 0 10px}
+.access-card h1{font-family:'Playfair Display',Georgia,serif;font-size:35px;line-height:1.1;letter-spacing:-.05em;color:#253a50;margin:0 0 12px}
+.access-description{font-size:14px;line-height:1.6;color:#7b8792;margin:0 0 29px}
+.access-form{display:grid;gap:11px}
+.access-form label{font-size:12px;font-weight:800;color:#526679}
+.access-form input{width:100%;min-width:0;border:1px solid #d7dfe5;border-radius:12px;padding:15px;font:600 24px 'DM Sans',sans-serif;text-align:center;letter-spacing:.65em;color:#273e54;background:#fbfcfc}
+.access-form input:focus{outline:3px solid #b2c7e1;outline-offset:2px}
+.access-form button{font-weight:800;font-size:14px;color:#fff;background:#304e72;border:0;border-radius:12px;min-height:48px;margin-top:5px}
+.access-form button:hover{background:#243f61}
+.access-form button:disabled{opacity:.65;cursor:wait}
+.access-error{min-height:20px;color:#986348;font-size:12px;text-align:center;margin:15px 0 0}
+.access-footnote{color:#9ba4ab;font-size:11px;text-align:center;margin-top:22px}
+.lock-button{border:1px solid #dde4ea;border-radius:8px;padding:6px 11px;background:white;color:#56708b;font:700 11px 'DM Sans',sans-serif}
+.lock-button:hover{background:#eef4f9}
+body:not(.unlocked) .app-shell{display:none!important}
+@media(max-width:700px){.access-card{padding:28px 23px}.access-card h1{font-size:32px}.access-description{font-size:13px}}
