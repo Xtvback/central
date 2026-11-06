@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f4ef">
+  <meta name="description" content="Painel editorial de André M. Fernandes: calendário, publicações do Threads, rotinas e resultados.">
+  <title>Estúdio Editorial · André M. Fernandes</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="data.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Navegação principal">
+      <a class="brand" href="#inicio" aria-label="Estúdio Editorial, início">
+        <div class="brand-mark">a<span>.</span></div>
+        <span><strong>estúdio<span class="brand-dim">editorial</span></strong><small>André M. Fernandes</small></span>
+      </a>
+      <div class="nav-label">O TEU ESPAÇO</div>
+      <nav class="side-nav">
+        <button class="nav-link active" data-view="inicio"><span>◫</span> Visão geral</button>
+        <button class="nav-link" data-view="calendario"><span>▦</span> Calendário</button>
+        <button class="nav-link" data-view="publicacoes"><span>☷</span> Publicações</button>
+        <button class="nav-link" data-view="rotina"><span>✓</span> O meu dia</button>
+        <button class="nav-link" data-view="resultados"><span>↗</span> Resultados</button>
+      </nav>
+      <div class="sidebar-note"><span class="note-symbol">✦</span><p>As histórias são o meu ponto de partida, não o meu limite.</p><small>O teu norte editorial</small></div>
+      <div class="sidebar-footer"><a href="https://app.metricool.com/" target="_blank" rel="noopener noreferrer">Abrir Metricool ↗</a><a href="https://www.threads.com/@andre.f.m.fernandes" target="_blank" rel="noopener noreferrer">Ver Threads ↗</a></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <div class="crumb"><span class="crumb-dot"></span> ÁREA DE TRABALHO <span class="slash">/</span> <span id="crumb-current">Visão geral</span></div>
+        <div class="top-actions"><span class="tiny-status"><span class="status-dot"></span> Dados de 06 nov.</span><a class="mini-avatar" href="https://www.threads.com/@andre.f.m.fernandes" aria-label="Abrir perfil Threads" target="_blank" rel="noopener noreferrer">AM</a></div>
+      </header>
+      <main id="main">
+        <section class="view active" id="view-inicio" aria-labelledby="title-home">
+          <div class="eyebrow">O TEU ESTÚDIO DE CRIAÇÃO <span class="eyebrow-line"></span> UM DIA DE CADA VEZ</div>
+          <div class="heading-row"><div><h1 id="title-home">Um dia de cada vez<span class="period">.</span></h1><p class="lede">Menos confusão, mais intenção. Aqui sabes o que vai sair, o que tens para fazer e o que está a resultar.</p></div><div class="date-badge" id="today-chip">HOJE</div></div>
+          <div class="stats" id="home-stats"></div>
+          <div class="dash-grid">
+            <section class="panel daily-panel"><div class="panel-head"><div><span class="eyebrow small">FOCO DE HOJE</span><h2>O que tenho de fazer</h2></div><button class="text-action" data-goto="rotina">Ver rotina completa ↗</button></div><div id="home-tasks" class="task-list"></div></section>
+            <section class="panel next-panel"><div class="panel-head"><div><span class="eyebrow small">PRÓXIMA PUBLICAÇÃO</span><h2>O que vem aí</h2></div><span class="pill" id="next-state">Threads</span></div><div id="next-post"></div></section>
+          </div>
+          <div class="dash-grid bottom">
+            <section class="panel"><div class="panel-head"><div><span class="eyebrow small">A TUA IDENTIDADE</span><h2>O que estamos a construir</h2></div></div><p class="panel-text">Um escritor com voz própria: escrita, vida, família, humor, curiosidade e projetos. O objetivo não é apenas alcance; é fazer as pessoas voltarem.</p><div class="pill-list"><span class="soft-pill">✍️ Escrita</span><span class="soft-pill">♡ Vida real</span><span class="soft-pill">◎ Conversas</span><span class="soft-pill">✦ Criatividade</span></div></section>
+            <section class="panel"><div class="panel-head"><div><span class="eyebrow small">PRÓXIMO MARCO</span><h2>O plano, sem pressas</h2></div></div><div id="home-milestone"></div><button class="text-action bottom-link" data-goto="calendario">Ver calendário editorial ↗</button></section>
+          </div>
+        </section>
+        <section class="view" id="view-calendario" aria-labelledby="title-calendar">
+          <div class="eyebrow">PLANEAMENTO EDITORIAL</div><div class="heading-row"><div><h1 id="title-calendar">O calendário<span class="period">.</span></h1><p class="lede">O que está realmente agendado e o que ainda é apenas planeamento.</p></div><button class="primary-btn" data-action="new-event">+ Adicionar plano</button></div>
+          <div class="calendar-shell"><div class="calendar-main panel"><div class="calendar-head"><div><button class="icon-btn" data-action="prev-month" aria-label="Mês anterior">‹</button><h2 id="month-title"></h2><button class="icon-btn" data-action="next-month" aria-label="Mês seguinte">›</button></div><button class="outline-btn" data-action="go-today">Hoje</button></div><div class="weekdays"><span>SEG</span><span>TER</span><span>QUA</span><span>QUI</span><span>SEX</span><span>SÁB</span><span>DOM</span></div><div id="calendar-grid" class="calendar-grid"></div><div class="legend"><span><i class="legend-dot blue"></i> Threads agendado</span><span><i class="legend-dot gold"></i> Plano / revisão</span><span><i class="legend-dot green"></i> Plano local</span></div></div><aside class="panel day-aside"><div class="eyebrow small">AGENDA DO DIA</div><h2 id="selected-date-title"></h2><div id="selected-date-events"></div></aside></div>
+        </section>
+        <section class="view" id="view-publicacoes" aria-labelledby="title-posts">
+          <div class="eyebrow">FILA DE PUBLICAÇÕES</div><div class="heading-row"><div><h1 id="title-posts">Cada palavra conta<span class="period">.</span></h1><p class="lede">Os textos que constam no Metricool, as revisões propostas e os teus rascunhos locais.</p></div><button class="primary-btn" data-action="new-post">+ Novo rascunho</button></div>
+          <div class="notice"><strong>Importante:</strong> os textos originais estão agendados no Metricool. As versões revistas são apenas propostas; nada muda na plataforma até atualizares lá.</div>
+          <div class="toolbar"><input id="post-search" type="search" placeholder="Procurar por tema ou palavra…" aria-label="Pesquisar publicações"><select id="post-filter" aria-label="Filtrar publicações"><option value="all">Todas as publicações</option><option value="review">Com revisão proposta</option><option value="escrita">Escrita</option><option value="vida">Vida e relações</option><option value="debate">Debate</option><option value="livros">Livros</option><option value="familia">Família</option><option value="local">Planeamento local</option></select></div>
+          <div id="post-list" class="posts-list"></div>
+        </section>
+        <section class="view" id="view-rotina" aria-labelledby="title-routine">
+          <div class="eyebrow">SEM PRESSA, MAS COM DIREÇÃO</div><div class="heading-row"><div><h1 id="title-routine">O meu dia<span class="period">.</span></h1><p class="lede">Pequenas ações consistentes. Nenhum dia precisa de ser perfeito.</p></div><input type="date" id="routine-date" aria-label="Escolher data"></div>
+          <div class="dash-grid"><section class="panel"><div class="panel-head"><div><span class="eyebrow small">LISTA DO DIA</span><h2 id="routine-day-title"></h2></div><span class="pill" id="routine-progress"></span></div><div id="routine-tasks" class="task-list"></div><form id="extra-task-form" class="inline-form"><input required id="extra-task" maxlength="120" placeholder="Adicionar uma tarefa tua…" aria-label="Nova tarefa"><button type="submit">Adicionar</button></form></section><section class="panel"><div class="panel-head"><div><span class="eyebrow small">UM RITMO SUSTENTÁVEL</span><h2>Não tens de viver nas redes</h2></div></div><div class="routine-tip"><strong>Nos dias com publicação</strong><p>Confirmar o agendamento, aparecer para responder e voltar mais tarde para acompanhar a conversa.</p></div><div class="routine-tip"><strong>No dia seguinte</strong><p>Ver métricas e anotar o que realmente aconteceu, sem julgar um post cedo demais.</p></div><div class="routine-tip"><strong>Uma vez por semana</strong><p>Rever padrões, não obsessivamente cada número. Guarda tempo para viver e escrever.</p></div></section></div>
+          <section class="panel milestone-panel"><div class="panel-head"><div><span class="eyebrow small">PLANO EDITORIAL</span><h2>Marcos e decisões</h2></div></div><div id="milestones" class="timeline"></div></section>
+        </section>
+        <section class="view" id="view-resultados" aria-labelledby="title-results">
+          <div class="eyebrow">DADOS REAIS, DECISÕES MELHORES</div><div class="heading-row"><div><h1 id="title-results">Crescer com intenção<span class="period">.</span></h1><p class="lede">O início é só uma referência. A evolução constrói-se com tempo e repetição.</p></div><button class="outline-btn" data-action="export-backup">Exportar dados ↓</button></div>
+          <div class="stats" id="result-stats"></div>
+          <div class="dash-grid"><section class="panel"><div class="panel-head"><div><span class="eyebrow small">PONTO DE PARTIDA</span><h2>Publicações anteriores</h2></div><span class="pill">Metricool · 6 nov.</span></div><div id="historical-chart" class="mini-chart"></div></section><section class="panel"><div class="panel-head"><div><span class="eyebrow small">ACOMPANHAMENTO</span><h2>Registar resultados</h2></div></div><p class="panel-text">Regista manualmente o desempenho dos próximos posts para comparar. Os números que introduzires ficam guardados neste navegador.</p><form id="results-form" class="results-form"><label>Post<select id="result-post" required></select></label><div class="form-grid"><label>Visualizações<input id="result-views" type="number" min="0" step="1" placeholder="0"></label><label>Interações<input id="result-interactions" type="number" min="0" step="1" placeholder="0"></label></div><button class="primary-btn" type="submit">Guardar resultado</button></form></section></div>
+          <section class="panel milestone-panel"><div class="panel-head"><div><span class="eyebrow small">O QUE JÁ MEDIMOS</span><h2>Resultados registados</h2></div></div><div id="manual-results" class="manual-results"></div></section>
+          <div class="privacy-row"><div><strong>Os teus dados locais</strong><p>Checklist, notas, rascunhos e resultados são guardados apenas neste navegador. Para passar para outro dispositivo, exporta e importa um ficheiro de cópia.</p></div><div class="privacy-actions"><button class="outline-btn" data-action="export-backup">Exportar cópia</button><button class="outline-btn" data-action="import-backup">Importar cópia</button><input type="file" accept="application/json,.json" id="import-file" hidden></div></div>
+        </section>
+      </main>
+      <footer class="footer"><span>© André M. Fernandes · Estúdio Editorial</span><span>Calendário: instantâneo de 06/11/2026 · Sem sincronização automática</span></footer>
+    </div>
+  </div>
+  <div id="modal" class="modal-backdrop" hidden><div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" data-action="close-modal" aria-label="Fechar">×</button><div id="modal-content"></div></div></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
