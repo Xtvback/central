@@ -20,7 +20,10 @@
   function loadScript(source) {
     return new Promise((resolve, reject) => {
       const script = document.createElement('script');
-      script.src = source;
+      // O preview público executa o HTML noutro domínio: usar assets JS com MIME correto.
+      const isPreview = location.hostname === 'htmlpreview.github.io' || location.hostname === 'html-preview.github.io';
+      const prefix = isPreview ? 'https://cdn.jsdelivr.net/gh/Xtvback/central@main/editorial/' : '';
+      script.src = prefix + source;
       script.onload = resolve;
       script.onerror = () => reject(new Error('Não foi possível carregar ' + source));
       document.body.appendChild(script);
