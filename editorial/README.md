@@ -40,3 +40,9 @@ Os ficheiros `index.html`, `style.css` e `app.js` funcionam sem compilação, in
 ## Próximos passos opcionais
 
 Uma sincronização automática e segura com o Metricool, bem como login e dados partilhados entre dispositivos, exigiria um backend autenticado. Não se deve publicar qualquer token do Metricool num site estático público.
+
+## Código de entrada
+
+O ecrã inicial pede um PIN de quatro algarismos e mantém a sessão aberta até ao botão **Sair** ou ao fecho da sessão do navegador.
+
+**Atenção:** esta é uma barreira visual de acesso casual, não autenticação real. O GitHub Pages e os ficheiros estáticos (incluindo o calendário em `data.js`) continuam públicos; alguém com conhecimentos técnicos pode aceder aos conteúdos sem passar pelo PIN. Um PIN de quatro dígitos também não oferece segurança criptográfica adequada. Não guardar informações privadas ou confidenciais neste repositório. Para proteção real, é necessário acesso autenticado num servidor/serviço próprio.
