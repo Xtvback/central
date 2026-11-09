@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "source": "https://github.com/Xtvback/central",
+  "projects": [
+    {
+      "name": "USLORDS — O Despertar dos Colares",
+      "category": "Jogos",
+      "description": "RPG Maker MV · projeto editável",
+      "kind": "local",
+      "target": "%USERPROFILE%\\Documents\\Games\\Uslords\\Game.rpgproject",
+      "folder": "%USERPROFILE%\\Documents\\Games\\Uslords",
+      "icon": "🎮",
+      "accent": "#F6A560"
+    },
+    {
+      "name": "USLORDS — Ecos de Speranzu",
+      "category": "Jogos",
+      "description": "Godot · projeto editável",
+      "kind": "godot",
+      "target": "%USERPROFILE%\\Documents\\Codex\\2026-10-19\\new-chat\\work\\uslords_snes\\project.godot",
+      "folder": "%USERPROFILE%\\Documents\\Codex\\2026-10-19\\new-chat\\work\\uslords_snes",
+      "icon": "🎮",
+      "accent": "#74B4F4"
+    },
+    {
+      "name": "USLORDS — One Line",
+      "category": "Jogos",
+      "description": "Projeto online no GitHub Pages",
+      "kind": "url",
+      "target": "https://xtvback.github.io/uslords-one-line/",
+      "icon": "⚔",
+      "accent": "#FFB56D"
+    },
+    {
+      "name": "Solvero — Música",
+      "category": "Música",
+      "description": "Suno · catálogo de músicas",
+      "kind": "url",
+      "target": "https://suno.com/@solvero",
+      "folder": "G:\\O meu disco\\Solvero",
+      "icon": "♫",
+      "accent": "#9DDD95"
+    },
+    {
+      "name": "Solvero — Informação Geral",
+      "category": "Música",
+      "description": "Inventário Suno/DistroKid no Google Drive",
+      "kind": "local",
+      "target": "G:\\O meu disco\\Solvero\\Informação Geral",
+      "icon": "♫",
+      "accent": "#9DDD95"
+    },
+    {
+      "name": "DistroKid — Os meus lançamentos",
+      "category": "Música",
+      "description": "Distribuição e estado de lançamentos",
+      "kind": "url",
+      "target": "https://distrokid.com/mymusic/",
+      "icon": "♫",
+      "accent": "#9DDD95"
+    },
+    {
+      "name": "Podcast — O Outro Lado",
+      "category": "Podcasts",
+      "description": "Página do podcast na Central",
+      "kind": "url",
+      "target": "https://xtvback.github.io/central/podcasts/",
+      "icon": "◉",
+      "accent": "#FFA05E"
+    },
+    {
+      "name": "Central — Portefólio",
+      "category": "Central",
+      "description": "Dashboard público dos projetos",
+      "kind": "url",
+      "target": "https://xtvback.github.io/central/",
+      "icon": "⌂",
+      "accent": "#96B5F8"
+    },
+    {
+      "name": "Estúdio Editorial",
+      "category": "Redes sociais",
+      "description": "Threads · calendário e planeamento",
+      "kind": "url",
+      "target": "https://xtvback.github.io/central/editorial/",
+      "icon": "✎",
+      "accent": "#9ABFF9"
+    },
+    {
+      "name": "Linktree — Central",
+      "category": "Redes sociais",
+      "description": "Links públicos para visitantes",
+      "kind": "url",
+      "target": "https://xtvback.github.io/central/links/",
+      "icon": "◎",
+      "accent": "#BB9CF5"
+    },
+    {
+      "name": "Livros — Portefólio",
+      "category": "Escrita",
+      "description": "O Toque Proibido, Enquanto Respirares, Aníbal",
+      "kind": "url",
+      "target": "https://andremfernandes.vercel.app/",
+      "icon": "▤",
+      "accent": "#CBB0FF"
+    },
+    {
+      "name": "Substack — Escrita",
+      "category": "Escrita",
+      "description": "Artigos, reflexões e histórias",
+      "kind": "url",
+      "target": "https://substack.com/@andrfernandes1",
+      "icon": "✒",
+      "accent": "#FFB37E"
+    },
+    {
+      "name": "APEE — Bairro do Restelo",
+      "category": "Comunidade",
+      "description": "Portal da associação de pais",
+      "kind": "url",
+      "target": "https://apeebairrodorestelo.com/",
+      "icon": "⌂",
+      "accent": "#77CED5"
+    },
+    {
+      "name": "GitHub — Central (repositório)",
+      "category": "Desenvolvimento",
+      "description": "Código e versões do dashboard central",
+      "kind": "url",
+      "target": "https://github.com/Xtvback/central",
+      "icon": "⌘",
+      "accent": "#A9B5D0"
+    },
+    {
+      "name": "GitHub — USLORDS",
+      "category": "Desenvolvimento",
+      "description": "Repositórios e código fonte do projeto",
+      "kind": "url",
+      "target": "https://github.com/Xtvback?tab=repositories&q=uslords",
+      "icon": "⌘",
+      "accent": "#A9B5D0"
+    },
+    {
+      "name": "Notas do RPG Maker",
+      "category": "Desenvolvimento",
+      "description": "Continuidade e logs do jogo",
+      "kind": "local",
+      "target": "%USERPROFILE%\\Desktop\\USLORDS_O_Despertar_dos_Colares",
+      "icon": "▤",
+      "accent": "#B4C4ED"
+    },
+    {
+      "name": "Notas do Godot",
+      "category": "Desenvolvimento",
+      "description": "Documentação Ecos de Speranzu",
+      "kind": "local",
+      "target": "%USERPROFILE%\\Desktop\\USLORDS_Ecos_de_Speranzu",
+      "icon": "▤",
+      "accent": "#B4C4ED"
+    }
+  ]
+}
