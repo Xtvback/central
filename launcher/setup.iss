@@ -1,5 +1,5 @@
-#define MyAppName "Central Launcher"
-#define MyAppVersion "1.0.0"
+﻿#define MyAppName "Central Launcher"
+#define MyAppVersion "1.1.0"
 #define MyAppPublisher "Central Criativa"
 #define MyAppExeName "CentralLauncher.exe"
 
@@ -12,7 +12,7 @@ DefaultDirName={localappdata}\Programs\Central Launcher
 DefaultGroupName={#MyAppName}
 DisableProgramGroupPage=yes
 OutputDir=installer
-OutputBaseFilename=CentralLauncher_Setup_1.0.0
+OutputBaseFilename=CentralLauncher_Setup_1.1.0
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -37,3 +37,4 @@ Name: "{autodesktop}\Central Launcher"; Filename: "{app}\{#MyAppExeName}"; Tasks
 
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "Abrir Central Launcher"; Flags: nowait postinstall skipifsilent
+
